@@ -8166,11 +8166,240 @@ section[data-recit-block="1"], .editeur {
     width: 200px;
     padding: 8px;
     line-height: 1.7; } }
-body.theme-recit-francais #page-header .card {
-  background-image: url("[[pix:theme|banner-francais]]") no-repeat right center; }
+body.theme-recit-francais {
+  /*-------------------------------*\
+      Buttons - Bars
+  \*-------------------------------*/
+  /*-- Button 1 --*/
+  /*-- Button 2 --*/
+  /*-- Button 3 --*/
+  /*-- Button 4 --*/
+  /*-- Button 5 --*/
+  /*-- Button 6 --*/
+  /*-------------------------------*\
+      Custom rows styles
+  \*-------------------------------*/ }
+  body.theme-recit-francais #page-header .card {
+    background-image: url("[[pix:theme|banner-francais]]") no-repeat right center; }
+  body.theme-recit-francais h5 a,
+  body.theme-recit-francais h5 a.style_btn_1 {
+    display: inline-block;
+    padding: 4px 10px;
+    color: #404245;
+    border: solid 2px #404245;
+    background: #ffffff;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px; }
+  body.theme-recit-francais h5 a:hover,
+  body.theme-recit-francais h5 a.style_btn_1:hover {
+    text-decoration: none;
+    color: #ffffff;
+    border: solid 2px #404245;
+    background: #404245; }
+  body.theme-recit-francais .recit-btn, body.theme-recit-francais .recit-btn-style_btn_1 {
+    display: inline-block;
+    padding: 4px 10px;
+    color: #404245;
+    border: solid 2px #404245;
+    background: #ffffff;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px; }
+  body.theme-recit-francais .recit-btn-style_btn_1:hover {
+    text-decoration: none;
+    color: #ffffff;
+    border: solid 2px #404245;
+    background: #404245; }
+  body.theme-recit-francais .recit-btn-style_btn_2, body.theme-recit-francais h5 a.style_btn_2 {
+    color: #d02027;
+    border: solid 2px #d02027;
+    background: #ffffff; }
+  body.theme-recit-francais .recit-btn-style_btn_2:hover, body.theme-recit-francais h5 a.style_btn_2:hover {
+    color: #ffffff;
+    border: solid 2px #d02027;
+    background: #d02027; }
+  body.theme-recit-francais .recit-btn-style_btn_3, body.theme-recit-francais h5 a.style_btn_3 {
+    color: #006BB4;
+    border: solid 2px #006BB4;
+    background: #ffffff; }
+  body.theme-recit-francais .recit-btn-style_btn_3:hover, body.theme-recit-francais h5 a.style_btn_3:hover {
+    color: #ffffff;
+    border: solid 2px #006BB4;
+    background: #006BB4; }
+  body.theme-recit-francais .recit-btn-style_btn_4, body.theme-recit-francais h5 a.style_btn_4 {
+    color: #006BB4;
+    border: solid 2px #FAA22A;
+    background: #FAA22A; }
+  body.theme-recit-francais .recit-btn-style_btn_4:hover, body.theme-recit-francais h5 a.style_btn_4:hover {
+    color: #ffffff;
+    border: solid 2px #006BB4;
+    background: #006BB4; }
+  body.theme-recit-francais .recit-btn-style_btn_5, body.theme-recit-francais h5 a.style_btn_5 {
+    color: #ffffff;
+    border: solid 2px #d02027;
+    background: #d02027; }
+  body.theme-recit-francais .recit-btn-style_btn_5:hover, body.theme-recit-francais h5 a.style_btn_5:hover {
+    color: #ffffff;
+    border: solid 2px #006BB4;
+    background: #006BB4; }
+  body.theme-recit-francais .recit-btn-style_btn_6, body.theme-recit-francais h5 a.style_btn_6 {
+    color: #ffffff;
+    border: solid 2px #404245;
+    background: #404245; }
+  body.theme-recit-francais .recit-btn-style_btn_6:hover, body.theme-recit-francais h5 a.style_btn_6:hover {
+    color: #ffffff;
+    border: solid 2px #006BB4;
+    background: #006BB4; }
+  body.theme-recit-francais .color-row {
+    background: #004e95; }
+  body.theme-recit-francais .diago-row {
+    background: #0057a7;
+    background: -moz-linear-gradient(75deg, #004e95 0%, #004e95 50%, #0057a7 50%);
+    background: -webkit-linear-gradient(75deg, #004e95 0%, #004e95 50%, #0057a7 50%);
+    background: linear-gradient(75deg, #004e95 0%, #004e95 50%, #0057a7 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#004e95",endColorstr="#0057a7",GradientType=1); }
+  body.theme-recit-francais .degrade-row {
+    background: #003a6d;
+    background: -moz-linear-gradient(45deg, #003a6d 0%, #1361a5 100%);
+    background: -webkit-linear-gradient(45deg, #003a6d 0%, #1361a5 100%);
+    background: linear-gradient(45deg, #003a6d 0%, #1361a5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003a6d', endColorstr='#1361a5',GradientType=1 ); }
+  @media screen and (min-width: 992px) {
+    body.theme-recit-francais h5 a {
+      padding: 6px 14px; } }
 
-body.theme-recit-histoire #page-header .card {
-  background-image: url("[[pix:theme|banner-histoire]]") no-repeat right center; }
+body.theme-recit-histoire {
+  /*-- Button 2 --*/
+  /*-- Button 3 --*/
+  /*-- Button 4 --*/
+  /*-- Button 5 --*/
+  /*-- Button 6 --*/ }
+  body.theme-recit-histoire #page-header .card {
+    background-image: url("[[pix:theme|banner-histoire]]") no-repeat right center; }
+  body.theme-recit-histoire h5 a,
+  body.theme-recit-histoire h5 a.style_btn_1 {
+    display: inline-block;
+    padding: 12px 12px 14px;
+    margin: 0 2px 4px 2px;
+    -moz-transform: skewX(15deg) !important;
+    -webkit-transform: skewX(15deg) !important;
+    -o-transform: skewX(15deg) !important;
+    transform: skewX(15deg) !important;
+    color: #555555;
+    border-left: solid 5px #FAA22A;
+    background: #fff; }
+  body.theme-recit-histoire h5 a:hover,
+  body.theme-recit-histoire h5 a.style_btn_1:hover {
+    color: #ffffff;
+    text-decoration: none;
+    border-left: solid 5px #FAA22A;
+    background: #006BB4; }
+  body.theme-recit-histoire .recit-btn, body.theme-recit-histoire .recit-btn-style_btn_1 {
+    display: inline-block;
+    padding: 12px 12px 14px;
+    margin: 0 2px 4px 2px;
+    -moz-transform: skewX(15deg) !important;
+    -webkit-transform: skewX(15deg) !important;
+    -o-transform: skewX(15deg) !important;
+    transform: skewX(15deg) !important;
+    color: #555555;
+    border-left: solid 5px #FAA22A;
+    background: #fff; }
+  body.theme-recit-histoire .recit-btn-style_btn_1:hover {
+    color: #ffffff;
+    text-decoration: none;
+    border-left: solid 5px #FAA22A;
+    background: #006BB4; }
+  body.theme-recit-histoire .recit-btn-style_btn_2, body.theme-recit-histoire h5 a.style_btn_2 {
+    border-left: solid 5px #006BB4; }
+  body.theme-recit-histoire .recit-btn-style_btn_2:hover, body.theme-recit-histoire h5 a.style_btn_2:hover {
+    color: #ffffff;
+    border-left: solid 5px #006BB4;
+    background: #FAA22A; }
+  body.theme-recit-histoire h5 a.style_btn_3 {
+    color: #ffffff;
+    border-left: solid 5px #006BB4;
+    background: #555555; }
+  body.theme-recit-histoire h5 a.style_btn_3:hover {
+    color: #ffffff;
+    border-left: solid 5px #FAA22A;
+    background: #555555; }
+  body.theme-recit-histoire h5 a.style_btn_4 {
+    color: #555555;
+    border-left: solid 5px #ffffff;
+    border-right: solid 5px #ffffff;
+    background: #ffffff; }
+  body.theme-recit-histoire h5 a.style_btn_4:hover {
+    color: #ffffff;
+    border-left: solid 5px #555555;
+    border-right: solid 5px #555555;
+    background: #555555; }
+  body.theme-recit-histoire h5 a.style_btn_5 {
+    color: #ffffff;
+    border-left: solid 5px #006BB4;
+    border-right: solid 5px #006BB4;
+    background: #006BB4; }
+  body.theme-recit-histoire h5 a.style_btn_5:hover {
+    color: #006BB4;
+    border-left: solid 5px #ffffff;
+    border-right: solid 5px #ffffff;
+    background: #ffffff; }
+  body.theme-recit-histoire h5 a.style_btn_6 {
+    color: #ffffff;
+    border-left: solid 5px #FAA22A;
+    border-right: solid 5px #FAA22A;
+    background: #FAA22A; }
+  body.theme-recit-histoire h5 a.style_btn_6:hover {
+    color: #FAA22A;
+    border-left: solid 5px #ffffff;
+    border-right: solid 5px #ffffff;
+    background: #ffffff; }
+  body.theme-recit-histoire h5 a strong {
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+    -moz-transform: skewX(-15deg) !important;
+    -webkit-transform: skewX(-15deg) !important;
+    -o-transform: skewX(-15deg) !important;
+    transform: skewX(-15deg) !important;
+    background: none; }
+  body.theme-recit-histoire .recit-btn {
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+    -moz-transform: skewX(-15deg) !important;
+    -webkit-transform: skewX(-15deg) !important;
+    -o-transform: skewX(-15deg) !important;
+    transform: skewX(-15deg) !important;
+    background: none; }
+  @media screen and (min-width: 768px) {
+    body.theme-recit-histoire h4 strong {
+      padding: 14px 52px 16px 0; }
+    body.theme-recit-histoire h4 strong:after {
+      display: block;
+      width: 60px;
+      height: 100%;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -28px;
+      transform: skewX(15deg);
+      background: #FAA22A;
+      z-index: 2; }
+    body.theme-recit-histoire h4 strong:before {
+      display: block;
+      width: 1000px;
+      height: 100%;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -998px;
+      background: #FAA22A;
+      z-index: 2; }
+    body.theme-recit-histoire h4 strong:after {
+      left: auto;
+      right: -28px; } }
 
 body.theme-recit-mathematique {
   	/*-------------------------------*\
