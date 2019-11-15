@@ -26,7 +26,7 @@
 defined('MOODLE_INTERNAL') || die();                                                                                                
  
 // This is the version of the plugin.                                                                                               
-$plugin->version = '2019101900';
+$plugin->version = '2019110800';
 
 // This is the named version.
 $plugin->release = '3.5.0';
@@ -43,5 +43,5 @@ $plugin->component = 'theme_recit_art';
  
 // This is a list of plugins, this plugin depends on (and their versions).                                                          
 $plugin->dependencies = [                                                                                                           
-    'theme_recit' => '2019072400'                                                                                                   
+    'theme_recit' => '2019110800'                                                                                                   
 ];

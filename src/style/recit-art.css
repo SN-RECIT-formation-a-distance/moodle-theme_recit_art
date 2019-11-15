@@ -2,8 +2,25 @@
 /*! 
  * Theme RECIT Art
  */
-/*@import "../../recit/scss/recit/variables"; // import the variables from the base theme*/
-/*$headings-font-family: $font-family-sans-serif !default;*/
+/**************************************
+ * FONTS
+ *************************************/
+/**************************************
+ * COLORS
+ *************************************/
+/**************************************
+ * GENERAL
+ *************************************/
+/**************************************
+ * FONTS
+ *************************************/
+/**************************************
+ * COLORS
+ *************************************/
+/*! 
+ * Theme RECIT
+ * L'ordre des fichiers est important. Réfléchir avant de faire un changement.
+ */
 /*****************************
  * BOOTSTRAP OVERRIDE
  *****************************/
@@ -19,7 +36,10 @@
 .card .card-footer {
   padding: 7px; }
 
-.btn-secondary, .recit-btn, .recit-btn-style_btn_1 {
+.row {
+  background-color: transparent !important; }
+
+.btn-secondary {
   display: inline-block;
   padding: 4px 10px;
   color: #0069bf;
@@ -29,14 +49,14 @@
   -moz-border-radius: 10px;
   border-radius: 10px; }
 
-.btn-secondary, .recit-btn-style_btn_1:hover {
+.btn-secondary {
   text-decoration: none;
   color: white;
   border: solid 2px #0069bf;
   background: #0069bf; }
 
 /*-- Button 2 --*/
-.btn-primary, .recit-btn, .recit-btn-style_btn_1 {
+.btn-primary {
   display: inline-block;
   padding: 4px 10px;
   color: #4b4a4e;
@@ -46,7 +66,7 @@
   -moz-border-radius: 10px;
   border-radius: 10px; }
 
-.btn-primary, .recit-btn-style_btn_1:hover {
+.btn-primary {
   text-decoration: none;
   color: white;
   border: solid 2px #4b4a4e;
@@ -56,6 +76,11 @@
 /*****************************
  * MOODLE OVERRIDE
  *****************************/
+body {
+  height: auto; }
+  body #page-wrapper {
+    padding: 0px; }
+
 .block_myoverview .card-deck .myoverviewimg.courseimage {
   background-size: contain;
   background-repeat: no-repeat; }
@@ -3093,10 +3118,12 @@ h5 {
 Pages
 *******************/
 #page-wrapper {
-  margin-top: 56px; }
+  margin-top: 56px;
+  background-color: #efefef; }
   #page-wrapper #page {
-    max-width: 1520px;
+    max-width: 1500px;
     background-color: #FFF;
+    margin: auto;
     /*padding: 15px;*/ }
 
 #page-admin-index.pagelayout-maintenance {
@@ -3104,16 +3131,17 @@ Pages
   #page-admin-index.pagelayout-maintenance #page-wrapper::after {
     min-height: inherit; }
 
-#page-header .card {
-  border: none;
-  height: 150px; }
-  #page-header .card .card-body .page-header-headings h1 {
-    color: #FFF; }
-
-#page-content #region-main-box {
-  width: 100%; }
-  #page-content #region-main-box #region-main > .card {
-    border: none; }
+body #page-content {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 15px;
+  padding-right: 15px; }
+  body #page-content #region-main-box {
+    width: 100%;
+    background-color: #FFF;
+    padding: 0px; }
+    body #page-content #region-main-box #region-main > .card {
+      border: none; }
 
 /* recit icons */
 /*.icon {
@@ -3195,6 +3223,7 @@ h6,
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); }
 
 #page-navbar {
+  float: left;
   /*.breadcrumb li::after {
     content: " ";
     display: block;
@@ -3233,25 +3262,22 @@ h6,
   /*.breadcrumb li::after { border-left: 10px solid #fff;}
   .breadcrumb li:hover:after {border-left: 10px solid #e6e6e6;}
   .breadcrumb li:hover:before, .btn-breadcrumb .btn.btn-default:before {border-left: 10px solid #adadad;}*/ }
-  #page-navbar .page-header-headings h1 {
-    font-size: 2.34375rem; }
   @media (max-width: 767px) {
     #page-navbar .breadcrumb {
       margin-left: 10px;
       margin-right: 10px;
       width: calc(100% - 20px) !important; } }
   #page-navbar .breadcrumb {
-    width: 100%;
     background-color: #fff;
     font-size: x-small;
     font-weight: bold;
-    border: solid 1px #adadad;
-    padding: 10px 15px 10px 15px; }
+    /*padding: 10px 15px 10px 15px;*/ }
   #page-navbar .breadcrumb li {
     border-color: transparent;
     border: 0px solid transparent;
     border-right: 1px solid transparent !important;
-    font-size: 0.7rem; }
+    font-size: 0.7rem;
+    padding-left: 0px; }
   #page-navbar .breadcrumb-default {
     background-color: #fff; }
   #page-navbar .btn-breadcrum li:hover {
@@ -3500,7 +3526,7 @@ nav.navbar {
   margin-right: -15px; }
   .recit-course-list .card {
     width: 340px;
-    /*calc((1520px / 4) - 35px);*/
+    /*calc((1500px / 4) - 35px);*/
     margin: 10px;
     border: 1px solid #efefef; }
     .recit-course-list .card .recit-card-img-top {
@@ -3522,7 +3548,7 @@ nav.navbar {
   #page-site-index #recitslideshow .carousel-indicators li {
     width: 30px;
     height: 10px;
-    border: 1px solid #4b4a4e; }
+    border: 1px solid #0069bf; }
   #page-site-index #recitslideshow .carousel-caption {
     top: 0;
     left: 40px;
@@ -3638,8 +3664,8 @@ nav.navbar {
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
-    color: #4b4a4e;
-    border: 1px solid #4b4a4e; }
+    color: #0069bf;
+    border: 1px solid #0069bf; }
   #page-site-index.notloggedin #page-header {
     background-position: center;
     background-repeat: no-repeat;
@@ -3714,7 +3740,7 @@ nav.navbar {
           margin-top: 14px; }
           #page-site-index.notloggedin #page-header #loginbox #boxForm p a {
             text-decoration: none;
-            color: #4b4a4e;
+            color: #0069bf;
             font-size: 1.2rem; }
         #page-site-index.notloggedin #page-header #loginbox #boxForm .btn-register {
           margin: 0;
@@ -3744,7 +3770,7 @@ nav.navbar {
   #page-site-index.notloggedin .fontpage-faq {
     margin: 3em auto; }
     #page-site-index.notloggedin .fontpage-faq h2 {
-      color: #4b4a4e;
+      color: #0069bf;
       margin-bottom: 2rem;
       font-size: 2rem; }
     #page-site-index.notloggedin .fontpage-faq #accordion .card {
@@ -3762,7 +3788,7 @@ nav.navbar {
       padding: 0;
       font-size: 1.2rem; }
       #page-site-index.notloggedin .fontpage-faq #accordion .btn-link:before {
-        color: #4b4a4e;
+        color: #0069bf;
         content: "\f068";
         display: inline-block;
         font: normal normal normal 14px/1 FontAwesome;
@@ -3877,7 +3903,7 @@ nav.navbar {
         #page-login-index.recit-login .loginpanel .card-block .form #loginbtn {
           padding: 0.5rem; }
       #page-login-index.recit-login .loginpanel .card-block .instructions {
-        background-color: #4b4a4e;
+        background-color: #0069bf;
         padding: 60px 15px;
         color: #fff;
         min-height: 350px; }
@@ -3914,10 +3940,12 @@ nav.navbar {
 
 #page-login-index {
   margin-right: 0px; }
+  #page-login-index #page-content #region-main-box {
+    background-color: transparent; }
 
-#page-login-index #page-wrapper {
-  background-image: url(https://moodledev3.recitfad.ca/theme/recit/pix/recit_login_background.png) !important; }
-
+/*#page-login-index #page-wrapper{
+    background-image: url(https://moodledev3.recitfad.ca/theme/recit/pix/recit_login_background.png)!important;
+}*/
 #page-login-index .loginpanel .form, #page-login-index #page-content, #page-login-index #region-main, #page-login-index .logo, #page-login-index .my-4, #page-login-index .card-block .row {
   background-color: transparent !important; }
 
@@ -3955,13 +3983,15 @@ nav.navbar {
 #page-login-index .input-group-password .input-group-addon, #page-login-index .input-group-password input {
   border-top: 1px solid rgba(0, 0, 0, 0.15) !important; }
 
-#page-login-index .btn-primary {
-  background-color: #fba22a;
-  border-color: #fba22a;
-  border-radius: 10px;
-  width: 40%;
-  font-weight: bold; }
-
+/*
+#page-login-index .btn-primary
+{
+    background-color: #fba22a;
+    border-color: #fba22a;
+    border-radius: 10px;
+    width: 40%;
+    font-weight: bold;
+}*/
 #page-login-index .forgetpass a {
   color: #0068bf; }
 
@@ -3972,14 +4002,15 @@ nav.navbar {
   background-repeat: repeat-x;
   background-position: center bottom;
   padding: 30px;
-  color: #4b4a4e;
+  color: #0069bf;
   background-color: #343a40;
-  width: 100%;
-  bottom: 0; }
+  width: 1500px;
+  bottom: 0;
+  margin: auto; }
   #top-footer1 hr {
     border-color: #FFF; }
   #top-footer1 h3 {
-    color: #4b4a4e; }
+    color: #0069bf; }
   #top-footer1 ul {
     list-style: none; }
   #top-footer1 .contact ul li {
@@ -4009,7 +4040,7 @@ nav.navbar {
         #top-footer1 .social ul li a.instagram {
           color: #8a3ab9; }
         #top-footer1 .social ul li a:hover {
-          color: #4b4a4e; }
+          color: #0069bf; }
   #top-footer1 .plugins_standard_footer_html .mobilefooter a.btn {
     white-space: inherit; }
 
@@ -4160,7 +4191,7 @@ nav.navbar {
     font-size: 1.143rem;
     font-weight: 600;
     text-transform: uppercase;
-    border-top: 1px dashed #4b4a4e;
+    border-top: 1px dashed #0069bf;
     padding-top: 4px;
     margin-top: 10px; }
 
@@ -4189,7 +4220,7 @@ nav.navbar {
     -moz-osx-font-smoothing: grayscale;
     content: "\e605"; }
   #sidepreopen-control:hover {
-    box-shadow: 0 0 6px #4b4a4e; }
+    box-shadow: 0 0 6px #0069bf; }
 
 body.drawer-open-right #sidepreopen-control {
   right: 260px; }
@@ -4253,6 +4284,10 @@ body.drawer-open-right [data-region="blocks-column"] {
   padding-bottom: 0; }
   #page-my-index .admininfos .breadcrumb-button {
     margin-right: 0 !important; }
+#page-my-index .admininfos > * {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #FFF; }
 #page-my-index .bg-1 {
   background-color: #4b4a4e; }
 #page-my-index .bg-2 {
@@ -4289,7 +4324,7 @@ body.drawer-open-right [data-region="blocks-column"] {
   font-size: 48px;
   color: rgba(0, 0, 0, 0.15); }
 #page-my-index .progress-chart-container .no-progress {
-  background-color: #4b4a4e; }
+  background-color: #0069bf; }
   #page-my-index .progress-chart-container .no-progress .fa {
     color: #fff;
     font-size: 42px;
@@ -4327,7 +4362,7 @@ body.coursepresentation-cover .headerbkg {
       margin: 0;
       width: 90px;
       height: 90px;
-      background-color: #4b4a4e;
+      background-color: #0069bf;
       border-radius: 100%;
       text-align: center;
       padding: 20px;
@@ -4360,7 +4395,7 @@ body.coursepresentation-cover .headerbkg {
       line-height: 20px;
       color: #fff;
       text-align: center;
-      background-color: #4b4a4e;
+      background-color: #0069bf;
       overflow: hidden; }
 #page-course-view-topics .course-content .single-section .sectionname,
 #page-course-view-topics .course-content .section .sectionname {
@@ -4372,7 +4407,7 @@ body.coursepresentation-cover .headerbkg {
   padding: 12px 15px 5px 15px;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: #4b4a4e;
+  color: #0069bf;
   font-weight: 700;
   text-align: center; }
 #page-course-view-topics .section-navigation.mdl-bottom .larrow,
@@ -4423,8 +4458,8 @@ body.coursepresentation-cover .headerbkg {
     .contentwithoutlink .labelbar i {
       margin-right: 10px; }
   .contentwithoutlink .labelbar.primary {
-    border-top-color: #4b4a4e;
-    color: #4b4a4e; }
+    border-top-color: #0069bf;
+    color: #0069bf; }
   .contentwithoutlink .labelbar.green {
     border-top-color: #8bc34a;
     color: #8bc34a; }
@@ -4537,7 +4572,7 @@ body.coursepresentation-cover .headerbkg {
   background: #b4c2cc; }
 
 .btn-ti.btn-primary {
-  background: #4b4a4e; }
+  background: #0069bf; }
 
 .btn-ti.btn-info {
   background: #68adde; }
@@ -4640,11 +4675,11 @@ body.coursepresentation-cover .headerbkg {
   border-radius: 0; }
 
 .btn-ti.no-bg {
-  color: #4b4a4e;
+  color: #0069bf;
   background: none; }
 
 .btn-ti.no-bg.btn-primary {
-  color: #4b4a4e; }
+  color: #0069bf; }
 
 .btn-ti.no-bg.btn-info {
   color: #68adde; }
@@ -4820,7 +4855,7 @@ body.coursepresentation-cover .headerbkg {
         body #nav-drawer .list-group .list-group-item a .text {
           display: none; }
         body #nav-drawer .list-group .list-group-item:hover {
-          background-color: #0069bf; }
+          background-color: #faa22a; }
           body #nav-drawer .list-group .list-group-item:hover[data-key="mycourses"] {
             border-bottom-right-radius: 0; }
           body #nav-drawer .list-group .list-group-item:hover a .text {
@@ -4829,7 +4864,7 @@ body.coursepresentation-cover .headerbkg {
             display: block;
             height: auto;
             overflow: auto;
-            background-color: #4b4a4e;
+            background-color: #0069bf;
             position: absolute;
             left: 60px;
             top: 45px;
@@ -5009,109 +5044,39 @@ body.coursepresentation-cover .headerbkg {
     .auto6 {
       grid-template-columns: auto auto auto auto auto auto; } }
 
-/*@import "../../recit/scss/recit/stylesmbededquestionsUBEO";*/
-/** General Styles **/
-.path-mod-glossary .glossarypost {
-  width: 95%;
-  border-collapse: separate;
-  margin: 0 auto;
-  text-align: left; }
-
-.path-mod-glossary .glossarypost.entrylist {
-  border-width: 0; }
-
-.path-mod-glossary .glossarypost.continuous .concept {
-  display: inline; }
-
-.path-mod-glossary .glossarypost .commands {
-  width: 200px;
-  white-space: nowrap; }
-
-.path-mod-glossary .glossarypost td.picture {
-  width: 35px; }
-
-.path-mod-glossary .glossarypost .entrylowersection .icons {
-  text-align: right;
-  padding-right: 5px; }
-
-.path-mod-glossary .glossarypost .entrylowersection .ratings {
-  text-align: right;
-  padding-right: 5px;
-  padding-bottom: 2px; }
-
-.path-mod-glossary .glossarypost .glossary-hidden-note {
-  margin: 0 .45em; }
-
-.path-mod-glossary .glossarydisplay {
-  margin-left: auto;
-  margin-right: auto; }
-
-.path-mod-glossary .glossarydisplay .tabs {
+.filter_embedquestion-iframe {
+  display: block;
   width: 100%;
-  margin-bottom: 0; }
+  height: 250px;
+  border: 0 none;
+  background: transparent; }
 
-.path-mod-glossary .glossarydisplay .tabs .side {
-  border-style: none;
-  border-width: 0;
-  width: auto; }
+body#page-filter-embedquestion-showquestion {
+  height: auto;
+  overflow-y: hidden;
+  background: transparent; }
 
-.path-mod-glossary .glossarydisplay .separator {
-  width: 4px; }
+body#page-filter-embedquestion-showquestion #ou-site-body,
+body#page-filter-embedquestion-showquestion #osep-pagewrapper,
+body#page-filter-embedquestion-showquestion #page-content,
+body#page-filter-embedquestion-showquestion #page {
+  background: transparent; }
 
-.path-mod-glossary table.glossarypopup {
-  width: 95%; }
-
-.path-mod-glossary .entrybox,
-.path-mod-glossary table.glossaryapproval,
-.path-mod-glossary .glossarypost .entrylowersection table {
-  width: 100%;
-  margin-bottom: 0; }
-
-.glossary-activity-picture {
-  float: left; }
-
-.glossary-activity-content {
-  margin-left: 40px; }
-
-/** Page specific styles **/
-#page-mod-glossary-view .glossarycontrol {
-  float: right;
-  text-align: right;
-  white-space: nowrap;
-  margin: 5px 0; }
-
-#page-mod-glossary-view table.glossarycategoryheader,
-#page-mod-glossary-import table.glossaryimportexport {
-  margin-left: auto;
-  margin-right: auto; }
-
-#page-mod-glossary-view table.glossarycategoryheader {
-  margin-bottom: 0; }
-
-#page-mod-glossary-view table.glossarycategoryheader th {
+body#page-filter-embedquestion-showquestion #region-main,
+body#page-filter-embedquestion-showquestion #osep-mainwrapper {
   padding: 0; }
 
-#page-mod-glossary-view td.glossarysearchbox label {
-  display: inline-block; }
+body#page-filter-embedquestion-showquestion #osep-bottomclearer {
+  display: none; }
 
-#page-mod-glossary-showentry #page-content {
-  min-width: 600px; }
+body#page-filter-embedquestion-showquestion .que {
+  margin: 0;
+  border-top: none; }
 
-#page-mod-glossary-print .mod-glossary-entrylist .mod-glossary-entry {
-  vertical-align: top; }
-
-#page-mod-glossary-print .displayprinticon,
-#page-mod-glossary-print .displaydate {
-  text-align: right;
-  font-size: 0.75em; }
-
-#page-mod-glossary-print .strong {
-  font-weight: bold; }
-
-.path-mod-glossary .printicon {
-  background: url([[pix:t/print]]) no-repeat scroll 2px center transparent;
-  /*rtl:ignore*/
-  padding-left: 20px; }
+/* This needs to work both inside and outside the iframe. */
+.filter_embedquestion-error {
+  background-color: #f0f0f1;
+  padding: 5px 10px; }
 
 /*Change question appearance*/
 .que {
@@ -5252,23 +5217,137 @@ body.coursepresentation-cover .headerbkg {
 .que.multichoice .answer div.r0 label, .que.multichoice .answer div.r1 label, .que.multichoice .answer div.r0 div.specificfeedback, .que.multichoice .answer div.r1 div.specificfeedback {
   text-indent: -25px !important; }
 
+/** General Styles **/
+.path-mod-glossary .glossarypost {
+  width: 95%;
+  border-collapse: separate;
+  margin: 0 auto;
+  text-align: left; }
+
+.path-mod-glossary .glossarypost.entrylist {
+  border-width: 0; }
+
+.path-mod-glossary .glossarypost.continuous .concept {
+  display: inline; }
+
+.path-mod-glossary .glossarypost .commands {
+  width: 200px;
+  white-space: nowrap; }
+
+.path-mod-glossary .glossarypost td.picture {
+  width: 35px; }
+
+.path-mod-glossary .glossarypost .entrylowersection .icons {
+  text-align: right;
+  padding-right: 5px; }
+
+.path-mod-glossary .glossarypost .entrylowersection .ratings {
+  text-align: right;
+  padding-right: 5px;
+  padding-bottom: 2px; }
+
+.path-mod-glossary .glossarypost .glossary-hidden-note {
+  margin: 0 .45em; }
+
+.path-mod-glossary .glossarydisplay {
+  margin-left: auto;
+  margin-right: auto; }
+
+.path-mod-glossary .glossarydisplay .tabs {
+  width: 100%;
+  margin-bottom: 0; }
+
+.path-mod-glossary .glossarydisplay .tabs .side {
+  border-style: none;
+  border-width: 0;
+  width: auto; }
+
+.path-mod-glossary .glossarydisplay .separator {
+  width: 4px; }
+
+.path-mod-glossary table.glossarypopup {
+  width: 95%; }
+
+.path-mod-glossary .entrybox,
+.path-mod-glossary table.glossaryapproval,
+.path-mod-glossary .glossarypost .entrylowersection table {
+  width: 100%;
+  margin-bottom: 0; }
+
+.glossary-activity-picture {
+  float: left; }
+
+.glossary-activity-content {
+  margin-left: 40px; }
+
+/** Page specific styles **/
+#page-mod-glossary-view .glossarycontrol {
+  float: right;
+  text-align: right;
+  white-space: nowrap;
+  margin: 5px 0; }
+
+#page-mod-glossary-view table.glossarycategoryheader,
+#page-mod-glossary-import table.glossaryimportexport {
+  margin-left: auto;
+  margin-right: auto; }
+
+#page-mod-glossary-view table.glossarycategoryheader {
+  margin-bottom: 0; }
+
+#page-mod-glossary-view table.glossarycategoryheader th {
+  padding: 0; }
+
+#page-mod-glossary-view td.glossarysearchbox label {
+  display: inline-block; }
+
+#page-mod-glossary-showentry #page-content {
+  min-width: 600px; }
+
+#page-mod-glossary-print .mod-glossary-entrylist .mod-glossary-entry {
+  vertical-align: top; }
+
+#page-mod-glossary-print .displayprinticon,
+#page-mod-glossary-print .displaydate {
+  text-align: right;
+  font-size: 0.75em; }
+
+#page-mod-glossary-print .strong {
+  font-weight: bold; }
+
+.path-mod-glossary .printicon {
+  background: url([[pix:t/print]]) no-repeat scroll 2px center transparent;
+  /*rtl:ignore*/
+  padding-left: 20px; }
+
 /*#region-main.card-body {
 	padding: 0px;
 }*/
-#page-header .card {
-  background-image: url("[[pix:theme|banner-course]]"); }
-
-#page-header .card {
-  background-repeat: no-repeat; }
-
-#page-header .card {
-  background-position: right top; }
+/*body.theme-recit{
+    #page-header .card{background-image:  url('[[pix:theme|banner-francais]]') no-repeat right center;}
+}*/
+body #page-header {
+  background-color: #fff; }
+  body #page-header #course-banner {
+    background-image: url("[[pix:theme|banner-course]]");
+    background-repeat: no-repeat;
+    background-position: right center;
+    height: 150px;
+    border: none;
+    padding: 1.25rem; }
+    body #page-header #course-banner .page-header-headings h1 {
+      color: #FFF;
+      font-family: "Verdana", sans-serif !important;
+      font-size: 2.34375rem; }
+  body #page-header .second-navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    padding-left: 15px;
+    padding-right: 15px; }
 
 body.drawer-open-right {
   margin-right: 260px; }
-
-#page-header .page-header-headings h1 {
-  font-family: "Verdana", sans-serif !important; }
 
 body.drawer-open-right [data-region="blocks-column"] {
   right: 0px; }
@@ -6670,7 +6749,7 @@ section[data-recit-block="1"], .editeur {
     -o-background-size: cover;
     background-size: cover; }
   section[data-recit-block="1"] .bg_sc_title_bar3, .editeur .bg_sc_title_bar3 {
-    background: url("//recitfad.ca/depot/sc1/ bg_sc_fonce_2.png") center top no-repeat;
+    background: url("//recitfad.ca/depot/sc1/bg_sc_fonce_2.png") center top no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -7263,7 +7342,7 @@ section[data-recit-block="1"], .editeur {
       flex-basis: 100%;
       -webkit-flex-basis: 100%;
       padding-bottom: 2rem; } }
-  section[data-recit-block="1"] banner_video, .editeur banner_video {
+  section[data-recit-block="1"] #banner_video, .editeur #banner_video {
     display: block;
     position: absolute;
     top: 0;
@@ -8067,6 +8146,213 @@ section[data-recit-block="1"], .editeur {
   section[data-recit-block="1"] .pale_grey_box h1, section[data-recit-block="1"] .pale_grey_box h2, section[data-recit-block="1"] .pale_grey_box h3, .editeur .pale_grey_box h1, .editeur .pale_grey_box h2, .editeur .pale_grey_box h3 {
     color: #006BB4; }
 
+.bandedessnee {
+  /* background colours */ }
+  .bandedessnee .comic {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Comic Sans', cursive;
+    padding: 1vmin; }
+  .bandedessnee .panel {
+    background-color: #fff;
+    border: solid 2px #000;
+    box-shadow: 0 6px 6px -6px #000;
+    display: inline-block;
+    flex: 1 1;
+    height: 200px;
+    margin: 1vmin;
+    overflow: hidden;
+    position: relative; }
+  .bandedessnee .text {
+    background-color: #fff;
+    border: solid 2px #000;
+    margin: 0;
+    padding: 3px 10px; }
+  .bandedessnee .top-left {
+    left: -6px;
+    position: absolute;
+    top: -2px;
+    transform: skew(-15deg); }
+  .bandedessnee .bottom-right {
+    bottom: -2px;
+    position: absolute;
+    right: -6px;
+    transform: skew(-15deg); }
+  .bandedessnee .speech {
+    background-color: #fff;
+    border: solid 2px #000;
+    border-radius: 12px;
+    display: inline-block;
+    margin: .5em;
+    padding: .5em 1em;
+    position: relative; }
+  .bandedessnee .speech:before {
+    border: solid 12px transparent;
+    border-left: solid 12px #000;
+    border-top: solid 12px #000;
+    bottom: -24px;
+    content: "";
+    height: 0;
+    left: 24px;
+    position: absolute;
+    transform: skew(-15deg);
+    width: 0; }
+  .bandedessnee .speech:after {
+    border: solid 10px transparent;
+    border-left: solid 10px #fff;
+    border-top: solid 10px #fff;
+    bottom: -19px;
+    content: "";
+    height: 0;
+    left: 27px;
+    position: absolute;
+    transform: skew(-15deg);
+    width: 0; }
+  .bandedessnee .panel:nth-child(1) {
+    flex-basis: 400px; }
+  .bandedessnee .panel:nth-child(2) {
+    flex-basis: 200px; }
+  .bandedessnee .panel:nth-child(3) {
+    flex-basis: 200px; }
+  .bandedessnee .panel:nth-child(4) {
+    flex-basis: 200px; }
+  .bandedessnee .panel:nth-child(5) {
+    flex-basis: 200px; }
+  .bandedessnee .panel:nth-child(6) {
+    flex-basis: 200px; }
+  .bandedessnee .panel:nth-child(7) {
+    flex-basis: 400px; }
+  .bandedessnee .panel:nth-child(8) {
+    flex-basis: 200px; }
+  .bandedessnee .panel:nth-child(9) {
+    flex-basis: 200px; }
+  .bandedessnee .panel:nth-child(10) {
+    flex-basis: 400px; }
+  .bandedessnee .panel:nth-child(11) {
+    flex-basis: 200px; }
+  .bandedessnee .panel:nth-child(12) {
+    flex-basis: 200px; }
+  .bandedessnee .panel:nth-child(13) {
+    flex-basis: 200px; }
+  .bandedessnee .panel:nth-child(14) {
+    flex-basis: 200px; }
+  .bandedessnee .panel:nth-child(15) {
+    flex-basis: 200px; }
+  .bandedessnee .panel:nth-child(16) {
+    flex-basis: 400px; }
+  .bandedessnee .panel:nth-child(17) {
+    flex-basis: 200px; }
+  .bandedessnee .panel:nth-child(18) {
+    flex-basis: 200px; }
+  .bandedessnee .panel:nth-child(4n+1) {
+    background-image: radial-gradient(circle, yellow, orange); }
+  .bandedessnee .panel:nth-child(4n+2) {
+    background-image: radial-gradient(circle, lightblue, deepskyblue); }
+  .bandedessnee .panel:nth-child(4n+3) {
+    background-image: radial-gradient(circle, palegreen, yellowgreen); }
+  .bandedessnee .panel:nth-child(4n+4) {
+    background-image: radial-gradient(circle, lightcoral, tomato); }
+
+.recit-alert {
+  position: absolute;
+  padding-right: 55px;
+  padding-left: 30px;
+  width: 80%;
+  padding-bottom: 20px;
+  font-family: "vigaregular", sans-serif;
+  border-radius: 15px;
+  background-color: #FFF;
+  color: #000;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  display: block; }
+
+/*alert-success*/
+.alert-success button {
+  background-color: #ca2127;
+  color: #FFF; }
+
+hr .alert-success hr {
+  border-color: #ca2127; }
+
+/*alert-danger*/
+.alert-danger button {
+  background-color: #0f7237;
+  color: #FFF; }
+
+.alert-danger hr {
+  border-color: #0f7237; }
+
+/*alert-primary*/
+.alert-primary button, .alert-primary {
+  background-color: #4b4a4e;
+  color: #FFF; }
+
+.alert-primary hr {
+  border-color: #4b4a4e; }
+
+/*alert-secondary*/
+.alert-secondary button, .I902c {
+  background-color: #0069bf;
+  color: #FFF; }
+
+.alert-secondary hr {
+  border-color: #0069bf; }
+
+/**/
+/*alert-warning*/
+.alert-warning button {
+  background-color: #ea7324;
+  color: #FFF; }
+
+.alert-warning hr {
+  border-color: #ea7324; }
+
+/**/
+/*alert-error*/
+.alert-error button {
+  background-color: #FF0000;
+  color: #FFF; }
+
+.alert-error hr {
+  border-color: #FF0000; }
+
+/**/
+.hr-alert {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  border: 0;
+  border-top: 4px solid #eee; }
+
+.btn-circle.btn-xl-alert {
+  width: 70px;
+  height: 70px;
+  /* padding: 10px 16px;*/
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px;
+  cursor: default;
+  transition: background-color 1s, color 1s;
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* pour centrer les images */
+  position: absolute;
+  right: -20px;
+  top: -20px;
+  z-index: 5; }
+
+.recit-retrait-gauche {
+  position: relative;
+  left: 10%;
+  /*padding-right:200px;*/
+  top: 50px;
+  padding-bottom: 50px; }
+
 @media screen and (min-width: 576px) {
   .math_boxes_row {
     display: flex;
@@ -8078,6 +8364,25 @@ section[data-recit-block="1"], .editeur {
   .row {
     margin-left: 0;
     margin-right: 0; } }
+/************************************
+ * JARALLAX
+ * https://github.com/nk-o/jarallax
+ ************************************/
+.jarallax {
+  position: relative;
+  z-index: 0; }
+
+.jarallax > .jarallax-img {
+  position: absolute;
+  object-fit: cover;
+  /* support for plugin https://github.com/bfred-it/object-fit-images */
+  font-family: 'object-fit: cover;';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; }
+
 /*.dropdown-submenu {
   position: relative;
 }
@@ -8201,8 +8506,10 @@ body.theme-recit-francais {
   /*-------------------------------*\
       Custom rows styles
   \*-------------------------------*/ }
-  body.theme-recit-francais #page-header .card {
-    background-image: url("[[pix:theme|banner-francais]]") no-repeat right center; }
+  body.theme-recit-francais #course-banner {
+    background-image: url("[[pix:theme|banner-francais]]"); }
+  body.theme-recit-francais #top-1.engine {
+    display: none; }
   body.theme-recit-francais h5 a,
   body.theme-recit-francais h5 a.style_btn_1 {
     display: inline-block;
@@ -8291,14 +8598,85 @@ body.theme-recit-francais {
     body.theme-recit-francais h5 a {
       padding: 6px 14px; } }
 
+body.theme-recit-anglais {
+  /*-------------------------------*\
+      Buttons - Bars
+  \*-------------------------------*/ }
+  body.theme-recit-anglais #course-banner {
+    background-image: url("[[pix:theme|banner-anglais]]"); }
+  body.theme-recit-anglais .recit-btn {
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+    -moz-transform: skewX(-15deg) !important;
+    -webkit-transform: skewX(-15deg) !important;
+    -o-transform: skewX(-15deg) !important;
+    transform: skewX(-15deg) !important;
+    background: none; }
+  body.theme-recit-anglais .recit-btn, body.theme-recit-anglais h5 a {
+    color: #0069bf;
+    border: solid 2px #0069bf;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    transform: skewX(0); }
+  body.theme-recit-anglais h5 a strong {
+    color: #59B5BE;
+    transform: skewX(0); }
+  body.theme-recit-anglais h5 a:hover {
+    color: #fff;
+    background: #59B5BE; }
+  body.theme-recit-anglais h5 a:hover strong, body.theme-recit-anglais h5 a.dark-btn:hover strong, body.theme-recit-anglais h5 a.red-btn:hover strong, body.theme-recit-anglais h5 a.btn_fill strong, body.theme-recit-anglais h5 a.btn_red_fill strong, body.theme-recit-anglais h5 a.btn_yellow_fill:hover strong {
+    color: #fff; }
+  body.theme-recit-anglais .recit-btn-style_btn_1, body.theme-recit-anglais h5 a.dark-btn {
+    color: #0069bf;
+    border: solid 2px #0069bf; }
+  body.theme-recit-anglais h5 a.dark-btn strong {
+    color: #1A425C; }
+  body.theme-recit-anglais .recit-btn-style_btn_1:hover, body.theme-recit-anglais h5 a.dark-btn:hover {
+    background: #0f7237; }
+  body.theme-recit-anglais h5 a.red-btn {
+    color: #DF6660;
+    border: solid 2px #DF6660; }
+  body.theme-recit-anglais h5 a.red-btn strong {
+    color: #DF6660; }
+  body.theme-recit-anglais h5 a.red-btn:hover {
+    background: #DF6660; }
+  body.theme-recit-anglais h5 a.btn_fill {
+    border: solid 2px #59B5BE;
+    background: #59B5BE; }
+  body.theme-recit-anglais h5 a.btn_red_fill {
+    border: solid 2px #DF6660;
+    background: #DF6660; }
+  body.theme-recit-anglais h5 a.btn_yellow_fill {
+    border: solid 2px #E9C06B;
+    background: #E9C06B; }
+  body.theme-recit-anglais h5 a.btn_yellow_fill strong {
+    color: #1A425C; }
+  body.theme-recit-anglais h5 a.btn_fill:hover,
+  body.theme-recit-anglais h5 a.btn_red_fill:hover,
+  body.theme-recit-anglais h5 a.btn_yellow_fill:hover {
+    border: solid 2px #1A425C;
+    background: #1A425C; }
+  body.theme-recit-anglais figure.figure {
+    display: block !important;
+    -webkit-border-radius: 16px !important;
+    -moz-border-radius: 16px !important;
+    border-radius: 16px !important;
+    margin-bottom: 40px !important;
+    overflow: hidden !important;
+    -webkit-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.5) !important;
+    -moz-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.5) !important;
+    box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.5) !important; }
+
 body.theme-recit-histoire {
   /*-- Button 2 --*/
   /*-- Button 3 --*/
   /*-- Button 4 --*/
   /*-- Button 5 --*/
   /*-- Button 6 --*/ }
-  body.theme-recit-histoire #page-header .card {
-    background-image: url("[[pix:theme|banner-histoire]]") no-repeat right center; }
+  body.theme-recit-histoire #course-banner {
+    background-image: url("[[pix:theme|banner-histoire]]"); }
   body.theme-recit-histoire .recit-btn {
     position: relative;
     display: inline-block;
@@ -8444,8 +8822,8 @@ body.theme-recit-mathematique {
   /*-- Button 4 --*/
   /*-- Button 5 --*/
   /*-- Button 6 --*/ }
-  body.theme-recit-mathematique #page-header .card {
-    background-image: url("[[pix:theme|banner-mathematique]]") no-repeat right center; }
+  body.theme-recit-mathematique #course-banner {
+    background-image: url("[[pix:theme|banner-mathematique]]"); }
   body.theme-recit-mathematique .recit-btn, body.theme-recit-mathematique .recit-btn-style_btn_1, body.theme-recit-mathematique h5 a,
   body.theme-recit-mathematique h5 a.style_btn_1,
   body.theme-recit-mathematique .submit.btn.btn-default {
@@ -8533,7 +8911,7 @@ body.theme-recit-mathematique {
     border: solid 1px #000;
     background: #000; }
 
-body.theme-recit-science #page-header .card {
+body.theme-recit-science #course-banner {
   background-image: url("[[pix:theme|banner-science]]"); }
 
 body.theme-recit-art {
@@ -8551,7 +8929,7 @@ body.theme-recit-art {
   								   
   				 
   \*-------------------------------*/ }
-  body.theme-recit-art #page-header .card {
+  body.theme-recit-art #course-banner {
     background-image: url("[[pix:theme|banner-art]]"); }
   body.theme-recit-art .page-header-headings h1 {
     color: #000 !important;
