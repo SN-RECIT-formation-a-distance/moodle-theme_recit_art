@@ -26,13 +26,14 @@
 defined('MOODLE_INTERNAL') || die();                                                                                                
  
 // This is the version of the plugin.                                                                                               
-$plugin->version = 2020103000;
+
+$plugin->version = 2021012200;
 
 // This is the named version.
-$plugin->release = 'R11-V1.11.0';
+$plugin->release = 'R11-V1.11.1';  
 
 // This is a stable release.
-$plugin->maturity = MATURITY_STABLE;                                                                                                    
+$plugin->maturity = MATURITY_BETA;                                                                                                    
  
 // This is the version of Moodle this plugin requires.                                                                              
 $plugin->requires = 2018050800;                                                                                                   
@@ -43,5 +44,5 @@ $plugin->component = 'theme_recit_art';
  
 // This is a list of plugins, this plugin depends on (and their versions).                                                          
 $plugin->dependencies = [                                                                                                           
-    'theme_recit' => 2020103000                                                                                                   
+    'theme_recit' => 2021012200                                                                                                   
 ];
