@@ -1,6 +1,6 @@
 echo off
 set zipName=theme_recit_art
-set pluginName=theme_recit_art
+set pluginName=recit_art
 
 rem remove the current 
 del %zipName%
