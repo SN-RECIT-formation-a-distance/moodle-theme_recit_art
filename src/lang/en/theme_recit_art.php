@@ -31,3 +31,4 @@ $string['choosereadme'] = 'Theme recit_art is a child theme of Recit';
 $string['pluginname'] = 'RÉCIT Art';                                                                                                    
 // We need to include a lang string for each block region.                                                                          
 $string['region-side-pre'] = 'Right';
+$string['privacy:metadata'] = 'Ce plugin ne conserve aucune donnée personelle.';
