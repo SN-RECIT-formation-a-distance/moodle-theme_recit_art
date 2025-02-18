@@ -27,12 +27,12 @@ defined('MOODLE_INTERNAL') || die();
  
 // This is the version of the plugin.                                                                                               
 
-$plugin->version = 2024050900;
+$plugin->version = 2025013000;
 
 // This is the named version.
-$plugin->release = 'v2.1.2-stable';  
+$plugin->release = 'v2.1.3-stable';  
 
-$plugin->supported = [400, 403];      //  Moodle 3.9.x, 3.10.x and 3.11.x are supported.
+$plugin->supported = [400, 405];      //  Moodle 3.9.x, 3.10.x and 3.11.x are supported.
 
 // This is a stable release.
 $plugin->maturity = MATURITY_STABLE;

@@ -25,9 +25,7 @@
 // This line protects the file from being accessed by a URL directly.                                                               
 defined('MOODLE_INTERNAL') || die();
  
-$THEME->name = 'recit_art';
-$THEME->sheets = [];                                                                                                                
-$THEME->editor_sheets = [];                                                                                                         
+$THEME->name = 'recit_art';                                                                                                  
 $THEME->haseditswitch = true;                         
 $THEME->parents = ['recit2'];   
 $THEME->scss = function($theme) {
